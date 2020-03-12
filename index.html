@@ -17,6 +17,13 @@
             text-align: center !important;
             margin-bottom: 4px;
         }
+        .white-box{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            display: inline-block;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +83,8 @@
 
         <label for="address" class="label-inline">Address:-</label>
         <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter address here"></textarea>
+
+        <input type="submit" value="Submit">
     </form>
 
     <h3>Blockquote</h3>
@@ -84,9 +93,9 @@
     </blockquote>
     <h3>Code</h3>
     <pre><code>
-            .test{
-                color: red;
-            }
+.test{
+    color: red;
+}
     </code></pre>
 
     <h3>Mics</h3>
@@ -95,12 +104,17 @@
         <div class="float-right">float-right</div>
     </div>
 
-    <h3>Grid(Bootstrap)</h3>
+    <h3>Grid(Bootstrap based)</h3>
     <div class="row">
         <div class="col-sm-4 col-md-6 test-box">1</div>
         <div class="col-sm-4 col-md-6 test-box">2</div>
         <div class="col-sm-4 col-md-6 test-box">3</div>
     </div>
+
+    <h3>Shadow & Border</h3>
+    <div class="white-box shadow"></div>
+    <div class="white-box border"></div>
+
     <hr>
     <h1>Extension</h1>
     <h3>Form extended(form_extended.css)</h3>
@@ -129,7 +143,6 @@
             Radio2
         </label>
     </div>
-
 </div>
 </body>
 </html>
