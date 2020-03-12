@@ -11,8 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/app.scss', 'dist/')
-    .sass('src/form_extended.scss', 'dist/');
+mix.sass('src/mincss.scss', 'dist/')
+    .sass('src/extension_form.scss', 'dist/');
 mix.disableNotifications();
 // Full API
 // mix.js(src, output);
