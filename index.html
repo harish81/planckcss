@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mincss</title>
+    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="dist/form_extended.css">
+    <style>
+        .test-box {
+            background-color: #606c76 !important;
+            height: 30px;
+            border-radius: 4px;
+            color: white !important;
+            text-align: center !important;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>mincss</h1>
+    <p>
+        mincss = <a href="https://milligram.io/">miligram</a> + <a href="https://github.com/zeMirco/flexbox-grid">flexbox-grid</a>;
+    </p>
+    <h3>Buttons</h3>
+
+    <button>Button</button>
+    <button class="button-outline">Outline</button>
+    <button class="button-clear">Clear</button>
+    <button class="button-small">Small</button>
+
+    <h3>Table</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>90%</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>90%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h3>Form</h3>
+
+    <form action="">
+        <label for="name" class="label-inline">Name:-</label>
+        <input type="text" name="name" id="name" placeholder="Enter name here">
+
+        <label for="age" class="label-inline">Age:-</label>
+        <select name="age" id="age">
+            <option value="">20</option>
+            <option value="">30</option>
+            <option value="">50+</option>
+        </select>
+
+        <label for="address" class="label-inline">Address:-</label>
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter address here"></textarea>
+    </form>
+
+    <h3>Blockquote</h3>
+    <blockquote>
+        The Lorem ipsum dolor sit amet.
+    </blockquote>
+    <h3>Code</h3>
+    <pre><code>
+            .test{
+                color: red;
+            }
+    </code></pre>
+
+    <h3>Mics</h3>
+    <div class="clearfix">
+        <div class="float-left">float-left</div>
+        <div class="float-right">float-right</div>
+    </div>
+
+    <h3>Grid(Bootstrap)</h3>
+    <div class="row">
+        <div class="col-sm-4 col-md-6 test-box">1</div>
+        <div class="col-sm-4 col-md-6 test-box">2</div>
+        <div class="col-sm-4 col-md-6 test-box">3</div>
+    </div>
+    <hr>
+    <h1>Extension</h1>
+    <h3>Form extended(form_extended.css)</h3>
+    <div class="checkbox">
+        <input id="checkbox2" type="checkbox" checked>
+        <label for="checkbox2" class="label-inline">
+            Checkbox (checked)
+        </label>
+    </div>
+    <div class="checkbox">
+        <input id="checkbox3" type="checkbox">
+        <label for="checkbox3" class="label-inline">
+            Checkbox (unchecked)
+        </label>
+    </div>
+
+    <div class="radio">
+        <input type="radio" name="radio1" id="radio1" value="option1" checked>
+        <label for="radio1" class="label-inline">
+            Radio1
+        </label>
+    </div>
+    <div class="radio">
+        <input type="radio" name="radio1" id="radio2" value="option2">
+        <label for="radio2" class="label-inline">
+            Radio2
+        </label>
+    </div>
+
+</div>
+</body>
+</html>

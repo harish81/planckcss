@@ -1,0 +1,113 @@
+// Others & Utility
+// --------------------
+
+// Blockquote
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+blockquote {
+  border-left: .3rem solid $color-quaternary;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Code
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+code {
+  background: $color-tertiary;
+  border-radius: .4rem;
+  font-size: 86%;
+  margin: 0 .2rem;
+  padding: .2rem .5rem;
+  white-space: nowrap;
+}
+
+pre {
+  background: $color-tertiary;
+  border-left: .3rem solid $color-primary;
+  overflow-y: hidden;
+
+  & > code {
+    border-radius: 0;
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+  }
+}
+
+
+
+// Divider
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+hr {
+  border: 0;
+  border-top: .1rem solid $color-tertiary;
+  margin: 3.0rem 0;
+}
+
+// Image
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+img {
+  max-width: 100%;
+}
+
+
+// Spacing
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.button,
+button,
+dd,
+dt,
+li {
+  margin-bottom: 1.0rem;
+}
+
+fieldset,
+input,
+select,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 2.5rem;
+}
+
+// Utility
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Clear a float with .clearfix
+.clearfix {
+
+  &:after {
+    clear: both;
+    content: ' '; // The space content is one way to avoid an Opera bug.
+    display: table;
+  }
+}
+
+// Float either direction
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
