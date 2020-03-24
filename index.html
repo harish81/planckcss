@@ -30,7 +30,7 @@
 <div class="container">
     <h1>mincss</h1>
     <p>
-        mincss = <a href="https://milligram.io/">miligram</a> + <a href="https://github.com/zeMirco/flexbox-grid">flexbox-grid</a>;
+        mincss = <a href="https://milligram.io/">miligram</a> + <a href="http://flexboxgrid.com/">flexboxgrid</a>;
     </p>
     <h3>Buttons</h3>
 
@@ -106,22 +106,22 @@
 
     <h3>Grid(Bootstrap based)</h3>
     <div class="row">
-        <div class="col-sm-4 col-md-6 test-box">1</div>
-        <div class="col-sm-4 col-md-6 test-box">2</div>
-        <div class="col-sm-4 col-md-6 test-box">3</div>
+        <div class="col-xs-12 col-sm-4 col-md-6 test-box">1</div>
+        <div class="col-xs-12 col-sm-4 col-md-6 test-box">2</div>
+        <div class="col-xs-12 col-sm-4 col-md-6 test-box">3</div>
     </div>
 
     <h3>Media Queries</h3>
     <pre><code>
-@media (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
     ...
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 64em) {
     ...
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 48em) {
     ...
 }
     </code></pre>
