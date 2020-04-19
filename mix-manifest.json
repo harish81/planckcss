@@ -1,4 +1,4 @@
 {
-    "/dist/mincss.css": "/dist/mincss.css",
-    "/dist/extension_form.css": "/dist/extension_form.css"
+    "/public/dist/mincss.css": "/public/dist/mincss.css",
+    "/public/dist/extension_form.css": "/public/dist/extension_form.css"
 }

@@ -11,6 +11,7 @@ html{
 
 body{
   color: $color-secondary;
+  background-color: rgba(203, 203, 210, 0.1);
   font-family: 'Roboto', sans-serif;
   font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
   font-weight: 300;
