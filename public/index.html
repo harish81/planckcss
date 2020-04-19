@@ -8,9 +8,12 @@
     <title>mincss</title>
     <link rel="stylesheet" href="dist/mincss.css">
     <link rel="stylesheet" href="dist/extension_form.css">
+    <link rel="stylesheet" href="dist/extension_spacing.css">
+    <link rel="stylesheet" href="dist/extension_colors.css">
+    <link rel="stylesheet" href="dist/extension_dropdown.css">
     <style>
         body{
-            background: #efefef;
+            background: #FAFAFA;
         }
         .test-box {
             background-color: #606c76 !important;
@@ -139,7 +142,7 @@
 
     <hr>
     <h1>Extension</h1>
-    <h3>Form extended(form_extended.css)</h3>
+    <h3>Form extended utility(form_extended.css)</h3>
     <div class="checkbox">
         <input id="checkbox2" type="checkbox" checked>
         <label for="checkbox2" class="label-inline">
@@ -166,7 +169,7 @@
         </label>
     </div>
     <h3>Spacing Utility (extension_spacing.css)</h3>
-    <div class="shadow" style="background: white">
+    <div class="shadow bg-white table-responsive">
         <table>
             <thead>
             <tr>
@@ -359,6 +362,54 @@
             </tr>
             </tbody>
         </table>
+    </div>
+    <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
+    <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
+
+    <h3>Color Utility (extension_colors.css)</h3>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            <div class="bg-white">.bg-white</div>
+            <div class="bg-dark text-white">.bg-dark</div>
+            <div class="bg-primary">.bg-primary</div>
+            <div class="bg-success">.bg-success</div>
+            <div class="bg-danger">.bg-danger</div>
+            <div class="bg-warning">.bg-warning</div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <div class="text-white">.text-white</div>
+            <div class="text-dark">.text-dark</div>
+            <div class="text-primary">.text-primary</div>
+            <div class="text-success">.text-success</div>
+            <div class="text-danger">.text-danger</div>
+            <div class="text-warning">.text-warning</div>
+        </div>
+    </div>
+    <br>
+    <div class="bg-success text-white p-3">
+        <strong>Success</strong>: This is alert example using colors utility. <a href="#" class="float-right text-white">x</a>
+    </div>
+
+    <h3>Dropdown Utility (extension_dropdown.css)</h3>
+    <div class="dropdown">
+        <button class="dropdown-button">Dropdown</button>
+        <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
+            <ul style="list-style-type: none;">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-button">Dropdown2</button>
+        <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
+            <ul style="list-style-type: none;" class="mb-0">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 </body>

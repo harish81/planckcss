@@ -6,6 +6,13 @@ table {
   width: 100%;
 }
 
+.table-responsive{
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 td,
 th {
   border-bottom: .1rem solid $color-quinary;

@@ -1,0 +1,24 @@
+@import "colors";
+
+$variants: (
+        dark: $color-secondary,
+        white: $color-initial,
+        primary:$color-primary,
+        success:$color-success,
+        danger:$color-danger,
+        warning:$color-warning
+);
+
+//Background colors
+@each $v,$color in $variants {
+  .bg-#{$v}{
+    background-color: $color;
+  }
+}
+
+//Text colors
+@each $v,$color in $variants {
+  .text-#{$v}{
+    color: $color;
+  }
+}

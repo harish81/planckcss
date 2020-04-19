@@ -13,7 +13,9 @@ let mix = require('laravel-mix');
 
 mix.sass('src/mincss.scss', 'public/dist/')
     .sass('src/extension_form.scss', 'public/dist/')
-    .sass('src/extension_spacing.scss', 'public/dist/');
+    .sass('src/extension_spacing.scss', 'public/dist/')
+    .sass('src/extension_colors.scss', 'public/dist/')
+    .sass('src/extension_dropdown.scss', 'public/dist/');
 mix.disableNotifications();
 // Full API
 // mix.js(src, output);
