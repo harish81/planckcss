@@ -10,18 +10,11 @@
     <link rel="stylesheet" href="dist/extension_form.css">
     <link rel="stylesheet" href="dist/extension_spacing.css">
     <link rel="stylesheet" href="dist/extension_colors.css">
-    <link rel="stylesheet" href="dist/extension_dropdown.css">
+    <link rel="stylesheet" href="dist/extension_toggle.css">
+    <link rel="stylesheet" href="dist/extension_display.css">
     <style>
         body{
             background: #FAFAFA;
-        }
-        .test-box {
-            background-color: #606c76 !important;
-            height: 30px;
-            border-radius: 4px;
-            color: white !important;
-            text-align: center !important;
-            margin-bottom: 4px;
         }
         .white-box{
             width: 100px;
@@ -115,10 +108,10 @@
     </div>
 
     <h3>Grid(Bootstrap based)</h3>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-6 test-box">1</div>
-        <div class="col-xs-12 col-sm-4 col-md-6 test-box">2</div>
-        <div class="col-xs-12 col-sm-4 col-md-6 test-box">3</div>
+    <div class="row" style="height: 100px">
+        <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">1</div>
+        <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">2</div>
+        <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">3</div>
     </div>
 
     <h3>Media Queries</h3>
@@ -169,6 +162,7 @@
         </label>
     </div>
     <h3>Spacing Utility (extension_spacing.css)</h3>
+    <label>Margin</label>
     <div class="shadow bg-white table-responsive">
         <table>
             <thead>
@@ -363,6 +357,7 @@
             </tbody>
         </table>
     </div>
+    <label>Padding</label>
     <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
     <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
 
@@ -390,7 +385,8 @@
         <strong>Success</strong>: This is alert example using colors utility. <a href="#" class="float-right text-white">x</a>
     </div>
 
-    <h3>Dropdown Utility (extension_dropdown.css)</h3>
+    <h3>Toggle Utility (extension_toggle.css)</h3>
+    <label>Dropdown</label>
     <div class="dropdown">
         <button class="dropdown-button">Dropdown</button>
         <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
@@ -410,6 +406,42 @@
                 <li><a href="#">Link 3</a></li>
             </ul>
         </div>
+    </div>
+
+    <label>Collapse</label>
+    <div>
+        <input class="collapse" type="checkbox" id="collapse1">
+        <label for="collapse1" class="button">Show me!</label>
+        <div>
+            This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <ul>
+        <li class="shadow bg-white p-2">
+            <input class="collapse" type="radio" name="collapse-list" id="collapse-list-1">
+            <label for="collapse-list-1" class="label-inline">Item 1!</label>
+            <div>
+                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+            </div>
+        </li>
+        <li class="shadow bg-white p-2">
+            <input class="collapse" type="radio" name="collapse-list" id="collapse-list-2">
+            <label for="collapse-list-2" class="label-inline">Item 2!</label>
+            <div>
+                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+            </div>
+        </li>
+    </ul>
+
+    <h3>Display Utility (extension_display.css)</h3>
+    <label>Display</label>
+    <div class="bg-danger d-inline d-md-none">.d-inline .d-md-none</div>
+    <div class="bg-danger d-inline-block">.d-inline-block</div>
+
+    <label>Sizing</label>
+    <div style="height: 200px">
+        <div class="w-25 h-75 bg-success">.w-25 .h-75</div>
     </div>
 </div>
 </body>

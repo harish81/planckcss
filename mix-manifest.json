@@ -3,5 +3,6 @@
     "/public/dist/extension_form.css": "/public/dist/extension_form.css",
     "/public/dist/extension_spacing.css": "/public/dist/extension_spacing.css",
     "/public/dist/extension_colors.css": "/public/dist/extension_colors.css",
-    "/public/dist/extension_dropdown.css": "/public/dist/extension_dropdown.css"
+    "/public/dist/extension_toggle.css": "/public/dist/extension_toggle.css",
+    "/public/dist/extension_display.css": "/public/dist/extension_display.css"
 }

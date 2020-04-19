@@ -1,0 +1,35 @@
+$breakpoints: (
+        sm: 48rem,
+        md: 64rem,
+        lg: 75rem,
+);
+
+$display: (none, inline, inline-block, block, flex, inline-flex, table, table-cell, table-row);
+
+// Display Utility
+@mixin display($infix:'') {
+  @if ($infix!='') {
+    $infix: $infix+"-";
+  }
+  @each $dis in $display{
+    .d-#{$infix}#{$dis}{
+      display: $dis !important;
+    }
+  }
+}
+
+@include display();
+@each $breakpointName, $breakpointSize in $breakpoints{
+  @media only screen and (min-width: #{$breakpointSize}){
+    @include display($breakpointName);
+  }
+}
+
+//Size utility
+@each $prop, $abbr in (width: w, height: h){
+  @each $size in (25, 50, 75, 100){
+    .#{$abbr}-#{$size}{
+      #{$prop}: $size * 1%;
+    }
+  }
+}
