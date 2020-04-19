@@ -1,4 +1,5 @@
 {
     "/public/dist/mincss.css": "/public/dist/mincss.css",
-    "/public/dist/extension_form.css": "/public/dist/extension_form.css"
+    "/public/dist/extension_form.css": "/public/dist/extension_form.css",
+    "/public/dist/extension_spacing.css": "/public/dist/extension_spacing.css"
 }
