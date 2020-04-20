@@ -39,7 +39,6 @@
 }
 
 //Sidebar
-
 .sidebar{
   width: 250px;
   height: 100vh;
@@ -66,4 +65,29 @@
 }
 .overlay.active{
   display: block;
+}
+
+//tab
+.tab{
+  position: relative;
+  & > label{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: 0;
+  }
+  & > .tab-content{
+    display: none;
+    position: relative;
+    top: 0px;
+  }
+  & > input{
+    display: none;
+  }
+  & > input:checked + label{
+    border-bottom: 3px solid #2196F3;
+  }
+  & > input:checked + label + .tab-content{
+    display: block;
+  }
 }

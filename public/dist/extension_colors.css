@@ -1,1 +1,48 @@
-.bg-dark{background-color:#606c76}.bg-white{background-color:#fff}.bg-primary{background-color:#2196f3}.bg-success{background-color:#4caf50}.bg-danger{background-color:#f44336}.bg-warning{background-color:#ffd740}.text-dark{color:#606c76}.text-white{color:#fff}.text-primary{color:#2196f3}.text-success{color:#4caf50}.text-danger{color:#f44336}.text-warning{color:#ffd740}
+.bg-dark {
+  background-color: #606c76;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-primary {
+  background-color: #2196F3;
+}
+
+.bg-success {
+  background-color: #4caf50;
+}
+
+.bg-danger {
+  background-color: #f44336;
+}
+
+.bg-warning {
+  background-color: #ffd740;
+}
+
+.text-dark {
+  color: #606c76;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-primary {
+  color: #2196F3;
+}
+
+.text-success {
+  color: #4caf50;
+}
+
+.text-danger {
+  color: #f44336;
+}
+
+.text-warning {
+  color: #ffd740;
+}
+

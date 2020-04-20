@@ -1,1 +1,94 @@
-.dropdown{display:inline-block}.dropdown .dropdown-content{position:absolute;visibility:hidden;opacity:0;z-index:-1;transition:visibility 0s linear .1s,opacity .1s linear}.dropdown:hover .dropdown-content{visibility:visible;z-index:3;opacity:1;transition-delay:0s}.collapse{display:none!important}.collapse+label{cursor:pointer}.collapse+label+*{display:none}.collapse:checked+label+*{display:block}.sidebar{width:250px;height:100vh;overflow:auto;position:fixed;left:0;top:0;z-index:3;transform:translateX(-105%);transition:transform .3s;box-shadow:0 16px 24px 2px rgba(0,0,0,.14)}.sidebar.active{transform:translateX(0)}.overlay{display:none;position:fixed;top:0;background:rgba(0,0,0,.5);width:100%;height:100vh}.overlay.active{display:block}
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  transition: visibility 0s linear 0.1s, opacity 0.1s linear;
+}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  z-index: 3;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.collapse {
+  display: none !important;
+}
+
+.collapse + label {
+  cursor: pointer;
+}
+
+.collapse + label + * {
+  display: none;
+}
+
+.collapse:checked + label + * {
+  display: block;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  transform: translateX(-105%);
+  transition: transform 0.3s;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.tab {
+  position: relative;
+}
+
+.tab > label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  top: 0;
+}
+
+.tab > .tab-content {
+  display: none;
+  position: relative;
+  top: 0px;
+}
+
+.tab > input {
+  display: none;
+}
+
+.tab > input:checked + label {
+  border-bottom: 3px solid #2196F3;
+}
+
+.tab > input:checked + label + .tab-content {
+  display: block;
+}
+
