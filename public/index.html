@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="dist/extension_colors.css">
     <link rel="stylesheet" href="dist/extension_toggle.css">
     <link rel="stylesheet" href="dist/extension_display.css">
+    <!--//OR Import//-->
+    <!--<link rel="stylesheet" href="dist/mincss.bundle.css">-->
     <style>
         body{
             background: #FAFAFA;
@@ -23,11 +25,75 @@
             display: inline-block;
             margin-left: 10px;
         }
+        .nav-bar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 55px;
+        }
+        .avatar{
+            width: 85px;
+            height: 85px;
+        }
+        .no-list{
+            list-style: none;
+        }
+        .no-list a{
+            display: block;
+            color: #606c76;
+            padding: 3px 10px;
+        }
+        .no-list a:hover{
+            background: #d1d1d1;
+        }
+        .no-list .icon{
+            margin-right: 10px;
+        }
     </style>
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.querySelector("#mainSidebar");
+            let overlay = document.querySelector('.overlay');
+            if(sidebar.classList.contains('active')){
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                overlay.removeEventListener('click',toggleSidebar);
+            }else{
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                overlay.addEventListener('click',toggleSidebar);
+            }
+        }
+    </script>
 </head>
 <body>
-<div class="container">
-    <h1>mincss</h1>
+<nav class="nav-bar d-flex shadow bg-white p-2 between-xs middle-xs">
+    <a href="javascript:void(0)" class="button menu-icon m-0" onclick="toggleSidebar()">☰</a>
+    <h4 class="m-0">mincss</h4>
+    <div></div>
+</nav>
+<!--Sidebar-->
+<div class="sidebar bg-white" id="mainSidebar">
+    <div class="bg-primary text-white pl-3 pt-4">
+        <img src="https://i.ya-webdesign.com/images/avatar-png-icon-6.png" alt="avatar" class="avatar">
+        <h4 class="m-0">mincss</h4>
+        <p>Sidebar menu</p>
+    </div>
+    <div>
+        <ul class="no-list">
+            <li><a href="#"><span class="icon">☖</span>Core</a></li>
+            <li><a href="#"><span class="icon">☸</span>Test</a></li>
+            <li><a href="#"><span class="icon">♣</span>Test</a></li>
+            <li><a href="#"><span class="icon">♨</span>Test</a></li>
+            <li><a href="#"><span class="icon">♳</span>Test</a></li>
+            <li><a href="#"><span class="icon">⚂</span>Test</a></li>
+        </ul>
+    </div>
+</div>
+<div class="overlay"></div>
+<!--End sidebar-->
+<div class="container" style="margin-top: 55px;">
     <p>
         mincss = <a href="https://milligram.io/">miligram</a> + <a href="http://flexboxgrid.com/">flexboxgrid</a>;
     </p>
@@ -433,6 +499,8 @@
             </div>
         </li>
     </ul>
+    <label>Sidebar</label>
+    <button onclick="toggleSidebar()">Toggle Sidebar</button>
 
     <h3>Display Utility (extension_display.css)</h3>
     <label>Display</label>

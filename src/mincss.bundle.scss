@@ -1,3 +1,4 @@
+//core
 @import "colors";
 @import "base";
 @import "form";
@@ -6,3 +7,10 @@
 @import "typography";
 @import "grid";
 @import "other";
+
+//extensions
+@import "extension_form";
+@import "extension_spacing";
+@import "extension_colors";
+@import "extension_toggle";
+@import "extension_display";

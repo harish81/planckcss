@@ -25,6 +25,10 @@ $display: (none, inline, inline-block, block, flex, inline-flex, table, table-ce
   }
 }
 
+.flex-1{
+  flex: 1 !important;
+}
+
 //Size utility
 @each $prop, $abbr in (width: w, height: h){
   @each $size in (25, 50, 75, 100){

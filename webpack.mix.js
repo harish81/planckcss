@@ -16,7 +16,8 @@ mix.sass('src/mincss.scss', 'public/dist/')
     .sass('src/extension_spacing.scss', 'public/dist/')
     .sass('src/extension_colors.scss', 'public/dist/')
     .sass('src/extension_toggle.scss', 'public/dist/')
-    .sass('src/extension_display.scss', 'public/dist/');
+    .sass('src/extension_display.scss', 'public/dist/')
+    .sass('src/mincss.bundle.scss', 'public/dist/');
 mix.disableNotifications();
 // Full API
 // mix.js(src, output);
