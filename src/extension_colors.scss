@@ -11,14 +11,14 @@ $variants: (
 
 //Background colors
 @each $v,$color in $variants {
-  .bg-#{$v}{
+  .bg-#{"" + $v}{
     background-color: $color;
   }
 }
 
 //Text colors
 @each $v,$color in $variants {
-  .text-#{$v}{
+  .text-#{"" + $v}{
     color: $color;
   }
 }

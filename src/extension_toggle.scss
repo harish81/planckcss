@@ -1,4 +1,4 @@
-
+@import "colors";
 //Dropdown menu
 .dropdown{
   display: inline-block;
@@ -62,30 +62,38 @@
   background: rgba(0,0,0,.5);
   width: 100%;
   height: 100vh;
+  z-index: 1;
 }
 .overlay.active{
   display: block;
 }
 
 //tab
-.tab{
+.tab-container{
   position: relative;
+}
+.tab{
+  display: inline-block;
   & > label{
     cursor: pointer;
-    display: block;
+    display: inline-block;
     position: relative;
     top: 0;
   }
   & > .tab-content{
     display: none;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 33px;
+    left: 0;
+    overflow-y: auto;
+    height: 85%;
   }
   & > input{
     display: none;
   }
   & > input:checked + label{
-    border-bottom: 3px solid #2196F3;
+    color: $color-primary;
+    border-bottom: 3px solid $color-primary;
   }
   & > input:checked + label + .tab-content{
     display: block;

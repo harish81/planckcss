@@ -15,39 +15,50 @@
     <!--//OR Import//-->
     <!--<link rel="stylesheet" href="dist/mincss.bundle.css">-->
     <style>
-        body{
+        body {
             background: #FAFAFA;
         }
-        .white-box{
+
+        .white-box {
             width: 100px;
             height: 100px;
             background-color: #fff;
             display: inline-block;
             margin-left: 10px;
         }
-        .nav-bar{
+
+        .nav-bar {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 55px;
         }
-        .avatar{
+
+        .avatar {
             width: 85px;
             height: 85px;
         }
-        .no-list{
+
+        .no-list {
             list-style: none;
         }
-        .no-list a{
+
+        .no-list a {
             display: block;
             color: #606c76;
             padding: 3px 10px;
         }
-        .no-list a:hover{
+
+        .no-list label {
+            font-weight: normal;
+        }
+
+        .no-list a:hover {
             background: #d1d1d1;
         }
-        .no-list .icon{
+
+        .no-list .icon {
             margin-right: 10px;
         }
     </style>
@@ -55,14 +66,14 @@
         function toggleSidebar() {
             let sidebar = document.querySelector("#mainSidebar");
             let overlay = document.querySelector('.overlay');
-            if(sidebar.classList.contains('active')){
+            if (sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
                 overlay.classList.remove('active');
-                overlay.removeEventListener('click',toggleSidebar);
-            }else{
+                overlay.removeEventListener('click', toggleSidebar);
+            } else {
                 sidebar.classList.add('active');
                 overlay.classList.add('active');
-                overlay.addEventListener('click',toggleSidebar);
+                overlay.addEventListener('click', toggleSidebar);
             }
         }
     </script>
@@ -82,29 +93,58 @@
     </div>
     <div>
         <ul class="no-list">
-            <li><a href="#"><span class="icon">☖</span>Core</a></li>
-            <li><a href="#"><span class="icon">☸</span>Test</a></li>
-            <li><a href="#"><span class="icon">♣</span>Test</a></li>
-            <li><a href="#"><span class="icon">♨</span>Test</a></li>
-            <li><a href="#"><span class="icon">♳</span>Test</a></li>
-            <li><a href="#"><span class="icon">⚂</span>Test</a></li>
+            <li>
+                <input class="collapse" type="checkbox" name="" id="coredoc" checked>
+                <label for="coredoc"><a><span class="icon">☖</span>Core</a></label>
+                <ul class="no-list">
+                    <li><a href="#doc-core-button">Buttons</a></li>
+                    <li><a href="#doc-core-table">Table</a></li>
+                    <li><a href="#doc-core-form">Form</a></li>
+                    <li><a href="#doc-core-image">Image</a></li>
+                    <li><a href="#doc-core-blockquote">Blockquote & Code</a></li>
+                    <li><a href="#doc-core-mics">Mics</a></li>
+                    <li><a href="#doc-core-mediaq">Media queries</a></li>
+                    <li><a href="#doc-core-shadow-border">Shadow & Border</a></li>
+                </ul>
+            </li>
+            <li><small class="ml-2">Extensions</small></li>
+            <li>
+                <input class="collapse" type="checkbox" name="" id="extspace">
+                <label for="extspace"><a><span class="icon">⚎</span>Spacing</a></label>
+                <ul class="no-list">
+                    <li><a href="#extension-spacing-margin">Margin</a></li>
+                    <li><a href="#extension-spacing-padding">Padding</a></li>
+                </ul>
+            </li>
+            <li><a href="#extension-colors"><span class="icon">⚽</span>Colors</a></li>
+            <li>
+                <input class="collapse" type="checkbox" name="" id="exttoggle">
+                <label for="exttoggle"><a><span class="icon">⚞</span>Toggle</a></label>
+                <ul class="no-list">
+                    <li><a href="#extension-toggle-dropdown">Dropdown</a></li>
+                    <li><a href="#extension-toggle-collapse">Collapse</a></li>
+                    <li><a href="#extension-toggle-sidebar">Sidebar</a></li>
+                    <li><a href="#extension-toggle-tabs">Tabs</a></li>
+                </ul>
+            </li>
+            <li><a href="#extension-display"><span class="icon">📺</span>Display</a></li>
         </ul>
     </div>
 </div>
 <div class="overlay"></div>
 <!--End sidebar-->
 <div class="container" style="margin-top: 55px;">
-    <p>
+    <p id="doc-core">
         mincss = <a href="https://milligram.io/">miligram</a> + <a href="http://flexboxgrid.com/">flexboxgrid</a>;
     </p>
-    <h3>Buttons</h3>
+    <h3 id="doc-core-button">Buttons</h3>
 
     <button>Button</button>
     <button class="button-outline">Outline</button>
     <button class="button-clear">Clear</button>
     <button class="button-small">Small</button>
 
-    <h3>Table</h3>
+    <h3 id="doc-core-table">Table</h3>
 
     <table>
         <thead>
@@ -133,7 +173,7 @@
         </tbody>
     </table>
 
-    <h3>Form</h3>
+    <h3 id="doc-core-form">Form</h3>
 
     <form action="">
         <label for="name" class="label-inline">Name:-</label>
@@ -152,11 +192,11 @@
         <input type="submit" value="Submit">
     </form>
 
-    <h3>Image</h3>
+    <h3 id="doc-core-image">Image</h3>
     <img src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50"
          alt="image sample">
 
-    <h3>Blockquote</h3>
+    <h3 id="doc-core-blockquote">Blockquote</h3>
     <blockquote>
         The Lorem ipsum dolor sit amet.
     </blockquote>
@@ -167,20 +207,20 @@
 }
     </code></pre>
 
-    <h3>Mics</h3>
+    <h3 id="doc-core-mics">Mics</h3>
     <div class="clearfix">
         <div class="float-left">float-left</div>
         <div class="float-right">float-right</div>
     </div>
 
-    <h3>Grid(Bootstrap based)</h3>
+    <h3 id="doc-core-grid">Grid(Bootstrap based)</h3>
     <div class="row" style="height: 100px">
         <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">1</div>
         <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">2</div>
         <div class="col-xs-12 col-sm-4 col-md-6 bg-dark h-25 text-white mb-2 border">3</div>
     </div>
 
-    <h3>Media Queries</h3>
+    <h3 id="doc-core-mediaq">Media Queries</h3>
     <pre><code>
 @media only screen and (min-width: 75em) { //lg = 1200px
     ...
@@ -195,13 +235,13 @@
 }
     </code></pre>
 
-    <h3>Shadow & Border</h3>
+    <h3 id="doc-core-shadow-border">Shadow & Border</h3>
     <div class="white-box shadow"></div>
     <div class="white-box border"></div>
 
     <hr>
     <h1>Extension</h1>
-    <h3>Form extended utility(form_extended.css)</h3>
+    <h3 id="extension-form">Form extended utility(form_extended.css)</h3>
     <div class="checkbox">
         <input id="checkbox2" type="checkbox" checked>
         <label for="checkbox2" class="label-inline">
@@ -228,206 +268,210 @@
         </label>
     </div>
     <h3>Spacing Utility (extension_spacing.css)</h3>
-    <label>Margin</label>
-    <div class="shadow bg-white table-responsive">
-        <table>
-            <thead>
-            <tr>
-                <th><code>xs and above</code></th>
-                <th><code>sm and above</code></th>
-                <th><code>md and above</code></th>
-                <th><code>lg and above</code></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><code>.m-0</code></td>
-                <td><code>.m-sm-0</code></td>
-                <td><code>.m-md-0</code></td>
-                <td><code>.m-lg-0</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-0</code></td>
-                <td><code>.mt-sm-0</code></td>
-                <td><code>.mt-md-0</code></td>
-                <td><code>.mt-lg-0</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-0</code></td>
-                <td><code>.mr-sm-0</code></td>
-                <td><code>.mr-md-0</code></td>
-                <td><code>.mr-lg-0</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-0</code></td>
-                <td><code>.mb-sm-0</code></td>
-                <td><code>.mb-md-0</code></td>
-                <td><code>.mb-lg-0</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-0</code></td>
-                <td><code>.ml-sm-0</code></td>
-                <td><code>.ml-md-0</code></td>
-                <td><code>.ml-lg-0</code></td>
-            </tr>
-            <tr>
-                <td><code>.m-1</code></td>
-                <td><code>.m-sm-1</code></td>
-                <td><code>.m-md-1</code></td>
-                <td><code>.m-lg-1</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-1</code></td>
-                <td><code>.mt-sm-1</code></td>
-                <td><code>.mt-md-1</code></td>
-                <td><code>.mt-lg-1</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-1</code></td>
-                <td><code>.mr-sm-1</code></td>
-                <td><code>.mr-md-1</code></td>
-                <td><code>.mr-lg-1</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-1</code></td>
-                <td><code>.mb-sm-1</code></td>
-                <td><code>.mb-md-1</code></td>
-                <td><code>.mb-lg-1</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-1</code></td>
-                <td><code>.ml-sm-1</code></td>
-                <td><code>.ml-md-1</code></td>
-                <td><code>.ml-lg-1</code></td>
-            </tr>
-            <tr>
-                <td><code>.m-2</code></td>
-                <td><code>.m-sm-2</code></td>
-                <td><code>.m-md-2</code></td>
-                <td><code>.m-lg-2</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-2</code></td>
-                <td><code>.mt-sm-2</code></td>
-                <td><code>.mt-md-2</code></td>
-                <td><code>.mt-lg-2</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-2</code></td>
-                <td><code>.mr-sm-2</code></td>
-                <td><code>.mr-md-2</code></td>
-                <td><code>.mr-lg-2</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-2</code></td>
-                <td><code>.mb-sm-2</code></td>
-                <td><code>.mb-md-2</code></td>
-                <td><code>.mb-lg-2</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-2</code></td>
-                <td><code>.ml-sm-2</code></td>
-                <td><code>.ml-md-2</code></td>
-                <td><code>.ml-lg-2</code></td>
-            </tr>
-            <tr>
-                <td><code>.m-3</code></td>
-                <td><code>.m-sm-3</code></td>
-                <td><code>.m-md-3</code></td>
-                <td><code>.m-lg-3</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-3</code></td>
-                <td><code>.mt-sm-3</code></td>
-                <td><code>.mt-md-3</code></td>
-                <td><code>.mt-lg-3</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-3</code></td>
-                <td><code>.mr-sm-3</code></td>
-                <td><code>.mr-md-3</code></td>
-                <td><code>.mr-lg-3</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-3</code></td>
-                <td><code>.mb-sm-3</code></td>
-                <td><code>.mb-md-3</code></td>
-                <td><code>.mb-lg-3</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-3</code></td>
-                <td><code>.ml-sm-3</code></td>
-                <td><code>.ml-md-3</code></td>
-                <td><code>.ml-lg-3</code></td>
-            </tr>
-            <tr>
-                <td><code>.m-4</code></td>
-                <td><code>.m-sm-4</code></td>
-                <td><code>.m-md-4</code></td>
-                <td><code>.m-lg-4</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-4</code></td>
-                <td><code>.mt-sm-4</code></td>
-                <td><code>.mt-md-4</code></td>
-                <td><code>.mt-lg-4</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-4</code></td>
-                <td><code>.mr-sm-4</code></td>
-                <td><code>.mr-md-4</code></td>
-                <td><code>.mr-lg-4</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-4</code></td>
-                <td><code>.mb-sm-4</code></td>
-                <td><code>.mb-md-4</code></td>
-                <td><code>.mb-lg-4</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-4</code></td>
-                <td><code>.ml-sm-4</code></td>
-                <td><code>.ml-md-4</code></td>
-                <td><code>.ml-lg-4</code></td>
-            </tr>
-            <tr>
-                <td><code>.m-5</code></td>
-                <td><code>.m-sm-5</code></td>
-                <td><code>.m-md-5</code></td>
-                <td><code>.m-lg-5</code></td>
-            </tr>
-            <tr>
-                <td><code>.mt-5</code></td>
-                <td><code>.mt-sm-5</code></td>
-                <td><code>.mt-md-5</code></td>
-                <td><code>.mt-lg-5</code></td>
-            </tr>
-            <tr>
-                <td><code>.mr-5</code></td>
-                <td><code>.mr-sm-5</code></td>
-                <td><code>.mr-md-5</code></td>
-                <td><code>.mr-lg-5</code></td>
-            </tr>
-            <tr>
-                <td><code>.mb-5</code></td>
-                <td><code>.mb-sm-5</code></td>
-                <td><code>.mb-md-5</code></td>
-                <td><code>.mb-lg-5</code></td>
-            </tr>
-            <tr>
-                <td><code>.ml-5</code></td>
-                <td><code>.ml-sm-5</code></td>
-                <td><code>.ml-md-5</code></td>
-                <td><code>.ml-lg-5</code></td>
-            </tr>
-            </tbody>
-        </table>
+    <label id="extension-spacing-margin">Margin</label>
+    <div class="shadow bg-white">
+        <input type="checkbox" name="spcutil" id="marginutil" class="collapse">
+        <label for="marginutil" class="p-2">Margin Classes ▼</label>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                <tr>
+                    <th><code>xs and above</code></th>
+                    <th><code>sm and above</code></th>
+                    <th><code>md and above</code></th>
+                    <th><code>lg and above</code></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>.m-0</code></td>
+                    <td><code>.m-sm-0</code></td>
+                    <td><code>.m-md-0</code></td>
+                    <td><code>.m-lg-0</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-0</code></td>
+                    <td><code>.mt-sm-0</code></td>
+                    <td><code>.mt-md-0</code></td>
+                    <td><code>.mt-lg-0</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-0</code></td>
+                    <td><code>.mr-sm-0</code></td>
+                    <td><code>.mr-md-0</code></td>
+                    <td><code>.mr-lg-0</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-0</code></td>
+                    <td><code>.mb-sm-0</code></td>
+                    <td><code>.mb-md-0</code></td>
+                    <td><code>.mb-lg-0</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-0</code></td>
+                    <td><code>.ml-sm-0</code></td>
+                    <td><code>.ml-md-0</code></td>
+                    <td><code>.ml-lg-0</code></td>
+                </tr>
+                <tr>
+                    <td><code>.m-1</code></td>
+                    <td><code>.m-sm-1</code></td>
+                    <td><code>.m-md-1</code></td>
+                    <td><code>.m-lg-1</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-1</code></td>
+                    <td><code>.mt-sm-1</code></td>
+                    <td><code>.mt-md-1</code></td>
+                    <td><code>.mt-lg-1</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-1</code></td>
+                    <td><code>.mr-sm-1</code></td>
+                    <td><code>.mr-md-1</code></td>
+                    <td><code>.mr-lg-1</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-1</code></td>
+                    <td><code>.mb-sm-1</code></td>
+                    <td><code>.mb-md-1</code></td>
+                    <td><code>.mb-lg-1</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-1</code></td>
+                    <td><code>.ml-sm-1</code></td>
+                    <td><code>.ml-md-1</code></td>
+                    <td><code>.ml-lg-1</code></td>
+                </tr>
+                <tr>
+                    <td><code>.m-2</code></td>
+                    <td><code>.m-sm-2</code></td>
+                    <td><code>.m-md-2</code></td>
+                    <td><code>.m-lg-2</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-2</code></td>
+                    <td><code>.mt-sm-2</code></td>
+                    <td><code>.mt-md-2</code></td>
+                    <td><code>.mt-lg-2</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-2</code></td>
+                    <td><code>.mr-sm-2</code></td>
+                    <td><code>.mr-md-2</code></td>
+                    <td><code>.mr-lg-2</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-2</code></td>
+                    <td><code>.mb-sm-2</code></td>
+                    <td><code>.mb-md-2</code></td>
+                    <td><code>.mb-lg-2</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-2</code></td>
+                    <td><code>.ml-sm-2</code></td>
+                    <td><code>.ml-md-2</code></td>
+                    <td><code>.ml-lg-2</code></td>
+                </tr>
+                <tr>
+                    <td><code>.m-3</code></td>
+                    <td><code>.m-sm-3</code></td>
+                    <td><code>.m-md-3</code></td>
+                    <td><code>.m-lg-3</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-3</code></td>
+                    <td><code>.mt-sm-3</code></td>
+                    <td><code>.mt-md-3</code></td>
+                    <td><code>.mt-lg-3</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-3</code></td>
+                    <td><code>.mr-sm-3</code></td>
+                    <td><code>.mr-md-3</code></td>
+                    <td><code>.mr-lg-3</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-3</code></td>
+                    <td><code>.mb-sm-3</code></td>
+                    <td><code>.mb-md-3</code></td>
+                    <td><code>.mb-lg-3</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-3</code></td>
+                    <td><code>.ml-sm-3</code></td>
+                    <td><code>.ml-md-3</code></td>
+                    <td><code>.ml-lg-3</code></td>
+                </tr>
+                <tr>
+                    <td><code>.m-4</code></td>
+                    <td><code>.m-sm-4</code></td>
+                    <td><code>.m-md-4</code></td>
+                    <td><code>.m-lg-4</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-4</code></td>
+                    <td><code>.mt-sm-4</code></td>
+                    <td><code>.mt-md-4</code></td>
+                    <td><code>.mt-lg-4</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-4</code></td>
+                    <td><code>.mr-sm-4</code></td>
+                    <td><code>.mr-md-4</code></td>
+                    <td><code>.mr-lg-4</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-4</code></td>
+                    <td><code>.mb-sm-4</code></td>
+                    <td><code>.mb-md-4</code></td>
+                    <td><code>.mb-lg-4</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-4</code></td>
+                    <td><code>.ml-sm-4</code></td>
+                    <td><code>.ml-md-4</code></td>
+                    <td><code>.ml-lg-4</code></td>
+                </tr>
+                <tr>
+                    <td><code>.m-5</code></td>
+                    <td><code>.m-sm-5</code></td>
+                    <td><code>.m-md-5</code></td>
+                    <td><code>.m-lg-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mt-5</code></td>
+                    <td><code>.mt-sm-5</code></td>
+                    <td><code>.mt-md-5</code></td>
+                    <td><code>.mt-lg-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mr-5</code></td>
+                    <td><code>.mr-sm-5</code></td>
+                    <td><code>.mr-md-5</code></td>
+                    <td><code>.mr-lg-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>.mb-5</code></td>
+                    <td><code>.mb-sm-5</code></td>
+                    <td><code>.mb-md-5</code></td>
+                    <td><code>.mb-lg-5</code></td>
+                </tr>
+                <tr>
+                    <td><code>.ml-5</code></td>
+                    <td><code>.ml-sm-5</code></td>
+                    <td><code>.ml-md-5</code></td>
+                    <td><code>.ml-lg-5</code></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <label>Padding</label>
+    <label id="extension-spacing-padding">Padding</label>
     <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
     <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
 
-    <h3>Color Utility (extension_colors.css)</h3>
+    <h3 id="extension-colors">Color Utility (extension_colors.css)</h3>
     <div class="row">
         <div class="col-sm-6 col-xs-12">
             <div class="bg-white">.bg-white</div>
@@ -448,13 +492,14 @@
     </div>
     <br>
     <div class="bg-success text-white p-3">
-        <strong>Success</strong>: This is alert example using colors utility. <a href="#" class="float-right text-white">x</a>
+        <strong>Success</strong>: This is alert example using colors utility. <a href="#"
+                                                                                 class="float-right text-white">x</a>
     </div>
 
     <h3>Toggle Utility (extension_toggle.css)</h3>
-    <label>Dropdown</label>
+    <label id="extension-toggle-dropdown">Dropdown</label>
     <div class="dropdown">
-        <button class="dropdown-button">Dropdown</button>
+        <button class="dropdown-button">Dropdown ▼</button>
         <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
             <ul style="list-style-type: none;">
                 <li><a href="#">Link 1</a></li>
@@ -464,7 +509,7 @@
         </div>
     </div>
     <div class="dropdown">
-        <button class="dropdown-button">Dropdown2</button>
+        <button class="dropdown-button">Dropdown2 ▼</button>
         <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
             <ul style="list-style-type: none;" class="mb-0">
                 <li><a href="#">Link 1</a></li>
@@ -474,58 +519,70 @@
         </div>
     </div>
 
-    <label>Collapse</label>
+    <label id="extension-toggle-collapse">Collapse</label>
     <div>
         <input class="collapse" type="checkbox" id="collapse1">
-        <label for="collapse1" class="button">Show me!</label>
+        <label for="collapse1" class="button">Show me! ▼</label>
         <div>
-            This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+            This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+            This is collapse content. Lorem ipsum dolor sit amet.
         </div>
     </div>
 
     <ul>
         <li class="shadow bg-white p-2">
             <input class="collapse" type="radio" name="collapse-list" id="collapse-list-1">
-            <label for="collapse-list-1" class="label-inline">Item 1!</label>
+            <label for="collapse-list-1" class="label-inline">Item 1! ▼</label>
             <div>
-                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
+                amet. This is collapse content. Lorem ipsum dolor sit amet.
             </div>
         </li>
         <li class="shadow bg-white p-2">
             <input class="collapse" type="radio" name="collapse-list" id="collapse-list-2">
-            <label for="collapse-list-2" class="label-inline">Item 2!</label>
+            <label for="collapse-list-2" class="label-inline">Item 2! ▼</label>
             <div>
-                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
+                This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
+                amet. This is collapse content. Lorem ipsum dolor sit amet.
             </div>
         </li>
     </ul>
-    <label>Sidebar</label>
+    <label id="extension-toggle-sidebar">Sidebar</label>
     <button onclick="toggleSidebar()">Toggle Sidebar</button>
 
-    <label>Tabs</label>
-    <div class="tab">
-        <input type="radio" name="tab-example1" id="tab-one" checked>
-        <label for="tab-one">ONE</label>
-        <div class="tab-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, veritatis!
-        </div>
-    </div>
-    <div class="tab">
-        <input type="radio" name="tab-example1" id="tab-two">
-        <label for="tab-two">TWO</label>
-        <div class="tab-content">
-            As the era of the masses does away with the instruments monopolizing power, wealth and arms, it will, inevitably, destroy the monopoly of social activity in such areas as sports, horsemanship, and so forth
-        </div>
-    </div>
-    <div class="tab">
-        <input type="radio" name="tab-example1" id="tab-three">
-        <label for="tab-three">THREE</label>
-        <div class="tab-content">
-            Societies which consider materialistic knowledge taboo are likewise reactionary societies, biased towards ignorance and hostile to freedom
+    <label id="extension-toggle-tabs">Tabs</label>
+    <div class="shadow p-3">
+        <div class="tab-container" style="height: 150px;">
+            <div class="tab">
+                <input type="radio" name="tab-example1" id="tab-one" checked>
+                <label for="tab-one">ONE</label>
+                <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, veritatis!
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="tab-example1" id="tab-two">
+                <label for="tab-two">TWO</label>
+                <div class="tab-content">
+                    As the era of the masses does away with the instruments monopolizing power, wealth and arms, it
+                    will, inevitably, destroy the monopoly of social activity in such areas as sports, horsemanship, and
+                    so forth
+                    <img src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50"
+                         alt="">
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="tab-example1" id="tab-three">
+                <label for="tab-three">THREE</label>
+                <div class="tab-content">
+                    Societies which consider materialistic knowledge taboo are likewise reactionary societies, biased
+                    towards ignorance and hostile to freedom
+                </div>
+            </div>
         </div>
     </div>
 
-    <h3>Display Utility (extension_display.css)</h3>
+    <h3 id="extension-display">Display Utility (extension_display.css)</h3>
     <label>Display</label>
     <div class="bg-danger d-inline d-md-none">.d-inline .d-md-none</div>
     <div class="bg-danger d-inline-block">.d-inline-block</div>
