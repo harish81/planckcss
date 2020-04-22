@@ -10,6 +10,8 @@ html{
 }
 
 body{
+  margin: 0;
+  padding: 0;
   color: $color-secondary;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element

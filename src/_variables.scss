@@ -1,0 +1,26 @@
+$color-initial: #fff !default;
+$color-primary: #2196F3 !default;
+$color-secondary: #606c76 !default;
+$color-tertiary: #f4f5f6 !default;
+$color-quaternary: #d1d1d1 !default;
+$color-quinary: #e1e1e1 !default;
+
+$color-success: #4caf50 !default;
+$color-danger: #f44336 !default;
+$color-warning: #ffd740 !default;
+
+$spacer:  1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer * 1,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+);
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);

@@ -17,11 +17,6 @@
     <style>
         body {
             background: #FAFAFA;
-            margin: 0;
-        }
-        .container{/*Todo: check this */
-            padding-right: 1.2rem;
-            padding-left: 1.2rem;
         }
 
         .white-box {
@@ -141,7 +136,8 @@
 <!--End sidebar-->
 <div class="container">
     <p id="doc-core">
-        mincss = <a href="https://milligram.io/">miligram</a> + <a href="http://flexboxgrid.com/">flexboxgrid</a>;
+        mincss = <a href="https://milligram.io/">miligram</a> + <a
+            href="https://github.com/evgenyrodionov/flexboxgrid2">flexboxgrid2</a>;
     </p>
     <h3 id="doc-core-button">Buttons</h3>
 
@@ -228,15 +224,18 @@
 
     <h3 id="doc-core-mediaq">Media Queries</h3>
     <pre><code>
-@media only screen and (min-width: 75em) { //lg = 1200px
+//xs = Smaller than 576px
+
+@media only screen and (min-width: 576px) { //sm
     ...
 }
-
-@media only screen and (min-width: 64em) { //md = 1024px
+@media only screen and (min-width: 768px) { //md
     ...
 }
-
-@media only screen and (min-width: 48em) { //sm = 768px
+@media only screen and (min-width: 992px) { //lg
+    ...
+}
+@media only screen and (min-width: 1200px) { //xl
     ...
 }
     </code></pre>
@@ -247,7 +246,7 @@
 
     <hr>
     <h1>Extension</h1>
-    <h3 id="extension-form">Form extended utility(form_extended.css)</h3>
+    <h3 id="extension-form">Form extended utility <small>(form_extended.css)</small></h3>
     <div class="checkbox">
         <input id="checkbox2" type="checkbox" checked>
         <label for="checkbox2" class="label-inline">
@@ -273,7 +272,7 @@
             Radio2
         </label>
     </div>
-    <h3>Spacing Utility (extension_spacing.css)</h3>
+    <h3>Spacing Utility <small>(extension_spacing.css)</small></h3>
     <label id="extension-spacing-margin">Margin</label>
     <div class="shadow bg-white">
         <input type="checkbox" name="spcutil" id="marginutil" class="collapse" checked>
@@ -477,7 +476,7 @@
     <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
     <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
 
-    <h3 id="extension-colors">Color Utility (extension_colors.css)</h3>
+    <h3 id="extension-colors">Color Utility <small>(extension_colors.css)</small></h3>
     <div class="row">
         <div class="col-sm-6 col-xs-12">
             <div class="bg-white">.bg-white</div>
@@ -502,11 +501,11 @@
                                                                                  class="float-right text-white">x</a>
     </div>
 
-    <h3>Toggle Utility (extension_toggle.css)</h3>
+    <h3>Toggle Utility <small>(extension_toggle.css)</small></h3>
     <label id="extension-toggle-dropdown">Dropdown</label>
     <div class="dropdown">
         <button class="dropdown-button">Dropdown ▼</button>
-        <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
+        <div class="dropdown-content bg-white shadow border pl-3" style="width: 30%;">
             <ul style="list-style-type: none;">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -516,7 +515,7 @@
     </div>
     <div class="dropdown">
         <button class="dropdown-button">Dropdown2 ▼</button>
-        <div class="dropdown-content bg-white shadow border pl-3" style="width: 200px;">
+        <div class="dropdown-content bg-white shadow border pl-3" style="width: 40%;">
             <ul style="list-style-type: none;" class="mb-0">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -588,7 +587,7 @@
         </div>
     </div>
 
-    <h3 id="extension-display">Display Utility (extension_display.css)</h3>
+    <h3 id="extension-display">Display Utility <small>(extension_display.css)</small></h3>
     <label>Display</label>
     <div class="bg-danger d-inline d-md-none">.d-inline .d-md-none</div>
     <div class="bg-danger d-inline-block">.d-inline-block</div>

@@ -1,8 +1,4 @@
-$breakpoints: (
-        sm: 48rem,
-        md: 64rem,
-        lg: 75rem,
-);
+@import "variables";
 
 $display: (none, inline, inline-block, block, flex, inline-flex, table, table-cell, table-row);
 
