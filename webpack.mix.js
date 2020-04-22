@@ -19,6 +19,11 @@ mix.sass('src/mincss.scss', 'public/dist/')
     .sass('src/extension_display.scss', 'public/dist/')
     .sass('src/mincss.bundle.scss', 'public/dist/');
 mix.disableNotifications();
+
+mix.browserSync({
+    proxy: 'localhost',
+    files: ['public/**']
+});
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

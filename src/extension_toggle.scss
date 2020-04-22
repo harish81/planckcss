@@ -7,16 +7,12 @@
   }
   .dropdown-content{
     position: absolute;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
     z-index: -1;
-    transition: visibility 0s linear 0.1s, opacity 0.1s linear;
   }
   &:hover .dropdown-content{
-    visibility: visible;
+    display: block;
     z-index: 3;
-    opacity: 1;
-    transition-delay: 0s;
   }
 }
 

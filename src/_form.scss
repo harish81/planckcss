@@ -39,8 +39,11 @@ select {
 textarea {
   min-height: 6.5rem;
 }
-
-label,
+label{
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
 legend {
   display: block;
   font-size: 1.6rem;
@@ -57,13 +60,6 @@ input[type='checkbox'],
 input[type='radio'] {
   display: inline;
 }
-
-.label-inline {
-  display: inline-block;
-  font-weight: normal;
-  margin-left: .5rem;
-}
-
 
 // Button
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -156,6 +152,12 @@ input[type='submit'] {
         color: $color-primary;
       }
     }
+  }
+}
+
+.form-group{
+  input{
+    margin-bottom: 0.1rem;
   }
 }
 

@@ -53,6 +53,7 @@
 
         .no-list label {
             font-weight: normal;
+            display: block;
         }
 
         .no-list a:hover {
@@ -178,19 +179,33 @@
     <h3 id="doc-core-form">Form</h3>
 
     <form action="">
-        <label for="name" class="label-inline">Name:-</label>
+        <label for="name">Name:-</label>
         <input type="text" name="name" id="name" placeholder="Enter name here">
 
-        <label for="age" class="label-inline">Age:-</label>
+        <label for="age">Age:-</label>
         <select name="age" id="age">
             <option value="">20</option>
             <option value="">30</option>
             <option value="">50+</option>
         </select>
 
-        <label for="address" class="label-inline">Address:-</label>
+        <label for="address">Address:-</label>
         <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter address here"></textarea>
 
+        <div class="form-group">
+            <label for="testinput1">Enter Your name:</label>
+            <input type="text" name="testinput" id="testinput1">
+            <label class="text-danger">This field is required!</label>
+        </div>
+
+        <div class="form-group">
+            <label for="testfile1" class="d-block">Upload profile pic:</label>
+            <input type="file" name="testfile" id="testfile1">
+        </div>
+
+        <div class="form-group">
+            <label for="rem_me"><input type="checkbox" name="rem_me" id="rem_me"> Remember me</label>
+        </div>
         <input type="submit" value="Submit">
     </form>
 
@@ -249,34 +264,34 @@
     <h3 id="extension-form">Form extended utility <small>(form_extended.css)</small></h3>
     <div class="checkbox">
         <input id="checkbox2" type="checkbox" checked>
-        <label for="checkbox2" class="label-inline">
+        <label for="checkbox2">
             Checkbox (checked)
         </label>
     </div>
     <div class="checkbox">
         <input id="checkbox3" type="checkbox">
-        <label for="checkbox3" class="label-inline">
+        <label for="checkbox3">
             Checkbox (unchecked)
         </label>
     </div>
 
     <div class="radio">
         <input type="radio" name="radio1" id="radio1" value="option1" checked>
-        <label for="radio1" class="label-inline">
+        <label for="radio1">
             Radio1
         </label>
     </div>
     <div class="radio">
         <input type="radio" name="radio1" id="radio2" value="option2">
-        <label for="radio2" class="label-inline">
+        <label for="radio2">
             Radio2
         </label>
     </div>
     <h3>Spacing Utility <small>(extension_spacing.css)</small></h3>
-    <label id="extension-spacing-margin">Margin</label>
+    <h5 id="extension-spacing-margin">Margin</h5>
     <div class="shadow bg-white">
-        <input type="checkbox" name="spcutil" id="marginutil" class="collapse" checked>
-        <label for="marginutil" class="p-2">Margin Classes ▼</label>
+        <input type="checkbox" name="spcutil" id="marginutil" class="collapse">
+        <label for="marginutil" class="p-2"><b>Margin Classes ▼</b></label>
         <div class="table-responsive">
             <table>
                 <thead>
@@ -472,7 +487,7 @@
             </table>
         </div>
     </div>
-    <label id="extension-spacing-padding">Padding</label>
+    <h5 id="extension-spacing-padding">Padding</h5>
     <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
     <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
 
@@ -502,11 +517,11 @@
     </div>
 
     <h3>Toggle Utility <small>(extension_toggle.css)</small></h3>
-    <label id="extension-toggle-dropdown">Dropdown</label>
+    <h5 id="extension-toggle-dropdown">Dropdown</h5>
     <div class="dropdown">
         <button class="dropdown-button">Dropdown ▼</button>
-        <div class="dropdown-content bg-white shadow border pl-3" style="width: 30%;">
-            <ul style="list-style-type: none;">
+        <div class="dropdown-content bg-white shadow border" style="width: 100px;">
+            <ul class="no-list m-0">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -515,7 +530,7 @@
     </div>
     <div class="dropdown">
         <button class="dropdown-button">Dropdown2 ▼</button>
-        <div class="dropdown-content bg-white shadow border pl-3" style="width: 40%;">
+        <div class="dropdown-content bg-white shadow border pl-3" style="width: 150px;">
             <ul style="list-style-type: none;" class="mb-0">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
@@ -524,7 +539,7 @@
         </div>
     </div>
 
-    <label id="extension-toggle-collapse">Collapse</label>
+    <h5 id="extension-toggle-collapse">Collapse</h5>
     <div>
         <input class="collapse" type="checkbox" id="collapse1">
         <label for="collapse1" class="button">Show me! ▼</label>
@@ -537,7 +552,7 @@
     <ul>
         <li class="shadow bg-white p-2">
             <input class="collapse" type="radio" name="collapse-list" id="collapse-list-1">
-            <label for="collapse-list-1" class="label-inline">Item 1! ▼</label>
+            <label for="collapse-list-1">Item 1! ▼</label>
             <div>
                 This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
                 amet. This is collapse content. Lorem ipsum dolor sit amet.
@@ -545,17 +560,17 @@
         </li>
         <li class="shadow bg-white p-2">
             <input class="collapse" type="radio" name="collapse-list" id="collapse-list-2">
-            <label for="collapse-list-2" class="label-inline">Item 2! ▼</label>
+            <label for="collapse-list-2">Item 2! ▼</label>
             <div>
                 This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
                 amet. This is collapse content. Lorem ipsum dolor sit amet.
             </div>
         </li>
     </ul>
-    <label id="extension-toggle-sidebar">Sidebar</label>
+    <h5 id="extension-toggle-sidebar">Sidebar</h5>
     <button onclick="toggleSidebar()">Toggle Sidebar</button>
 
-    <label id="extension-toggle-tabs">Tabs</label>
+    <h5 id="extension-toggle-tabs">Tabs</h5>
     <div class="shadow p-3">
         <div class="tab-container" style="height: 150px;">
             <div class="tab">
@@ -588,11 +603,11 @@
     </div>
 
     <h3 id="extension-display">Display Utility <small>(extension_display.css)</small></h3>
-    <label>Display</label>
+    <h5>Display</h5>
     <div class="bg-danger d-inline d-md-none">.d-inline .d-md-none</div>
     <div class="bg-danger d-inline-block">.d-inline-block</div>
 
-    <label>Sizing</label>
+    <h5>Sizing</h5>
     <div style="height: 200px">
         <div class="w-25 h-75 bg-success">.w-25 .h-75</div>
     </div>
