@@ -11,18 +11,18 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/planckcss.scss', 'docs/dist/')
-    .sass('src/extension_form.scss', 'docs/dist/')
-    .sass('src/extension_spacing.scss', 'docs/dist/')
-    .sass('src/extension_colors.scss', 'docs/dist/')
-    .sass('src/extension_toggle.scss', 'docs/dist/')
-    .sass('src/extension_display.scss', 'docs/dist/')
-    .sass('src/planckcss.bundle.scss', 'docs/dist/');
+mix.sass('src/planckcss.scss', 'dist/')
+    .sass('src/extension_form.scss', 'dist/')
+    .sass('src/extension_spacing.scss', 'dist/')
+    .sass('src/extension_colors.scss', 'dist/')
+    .sass('src/extension_toggle.scss', 'dist/')
+    .sass('src/extension_display.scss', 'dist/')
+    .sass('src/planckcss.bundle.scss', 'dist/');
 mix.disableNotifications();
 
 mix.browserSync({
     proxy: 'localhost',
-    files: ['docs/**']
+    files: ['dist/**','docs/**']
 });
 // Full API
 // mix.js(src, output);
@@ -59,5 +59,5 @@ mix.browserSync({
 //   processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 //   purifyCss: false, // Remove unused CSS selectors.
 //   terser: {}, // Terser-specific options. https://github.com/webpack-contrib/terser-webpack-plugin#options
-//   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/docs/plugins.md
+//   postCss: [] // Post-CSS options: https://github.com/postcss/postcss/blob/master/plugins.md
 // });
