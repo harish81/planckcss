@@ -7,16 +7,16 @@ Planckcss is extension based framework. You can use extension only if needed.
 
 ## How to use?([CDNs](https://www.jsdelivr.com/package/gh/harish81/planckcss))
 ```html
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/planckcss.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/extension_form.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/extension_spacing.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/extension_colors.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/extension_toggle.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/extension_display.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/planckcss.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/extension_form.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/extension_spacing.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/extension_colors.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/extension_toggle.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/extension_display.css" rel="stylesheet">
 ```
 OR Import
 ```html
-<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/dist/planckcss.bundle.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/harish81/planckcss@<version>/docs/dist/planckcss.bundle.css" rel="stylesheet">
 ```
 
 ## Examples & Docs

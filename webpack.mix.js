@@ -11,18 +11,18 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.sass('src/planckcss.scss', 'dist/')
-    .sass('src/extension_form.scss', 'dist/')
-    .sass('src/extension_spacing.scss', 'dist/')
-    .sass('src/extension_colors.scss', 'dist/')
-    .sass('src/extension_toggle.scss', 'dist/')
-    .sass('src/extension_display.scss', 'dist/')
-    .sass('src/planckcss.bundle.scss', 'dist/');
+mix.sass('src/planckcss.scss', 'docs/dist/')
+    .sass('src/extension_form.scss', 'docs/dist/')
+    .sass('src/extension_spacing.scss', 'docs/dist/')
+    .sass('src/extension_colors.scss', 'docs/dist/')
+    .sass('src/extension_toggle.scss', 'docs/dist/')
+    .sass('src/extension_display.scss', 'docs/dist/')
+    .sass('src/planckcss.bundle.scss', 'docs/dist/');
 mix.disableNotifications();
 
 mix.browserSync({
     proxy: 'localhost',
-    files: ['dist/**','docs/**']
+    files: ['docs/**']
 });
 // Full API
 // mix.js(src, output);

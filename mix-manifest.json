@@ -1,9 +1,9 @@
 {
-    "/dist/planckcss.css": "/dist/planckcss.css",
-    "/dist/extension_form.css": "/dist/extension_form.css",
-    "/dist/extension_spacing.css": "/dist/extension_spacing.css",
-    "/dist/extension_colors.css": "/dist/extension_colors.css",
-    "/dist/extension_toggle.css": "/dist/extension_toggle.css",
-    "/dist/extension_display.css": "/dist/extension_display.css",
-    "/dist/planckcss.bundle.css": "/dist/planckcss.bundle.css"
+    "/docs/dist/planckcss.css": "/docs/dist/planckcss.css",
+    "/docs/dist/extension_form.css": "/docs/dist/extension_form.css",
+    "/docs/dist/extension_spacing.css": "/docs/dist/extension_spacing.css",
+    "/docs/dist/extension_colors.css": "/docs/dist/extension_colors.css",
+    "/docs/dist/extension_toggle.css": "/docs/dist/extension_toggle.css",
+    "/docs/dist/extension_display.css": "/docs/dist/extension_display.css",
+    "/docs/dist/planckcss.bundle.css": "/docs/dist/planckcss.bundle.css"
 }
