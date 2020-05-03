@@ -1,7 +1,7 @@
 {
-  "name": "mincss",
-  "version": "1.0.0",
-  "description": "",
+  "name": "planckcss",
+  "version": "0.3",
+  "description": "A minimal css framework based on milligram and flexbox grid2.",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",

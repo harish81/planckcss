@@ -1,4 +1,7 @@
 # planckcss
+![version](https://img.shields.io/github/v/release/harish81/planckcss?include_prereleases&label=version)
+![commit](https://img.shields.io/github/last-commit/harish81/planckcss)
+
 A minimal css framework based on [milligram](https://github.com/milligram/milligram) and [flexbox grid2](https://github.com/evgenyrodionov/flexboxgrid2).
 Planckcss is ~19 kb (Core) & ~35 kb (Bundle of all extensions).
 
