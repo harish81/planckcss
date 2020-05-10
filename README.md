@@ -1,3 +1,5 @@
+<p align="center"> <img src="https://harish81.github.io/planckcss/images/logo.png" alt="logo"/> </p>
+
 # planckcss
 ![version](https://img.shields.io/github/v/release/harish81/planckcss?include_prereleases&label=version)
 ![commit](https://img.shields.io/github/last-commit/harish81/planckcss)

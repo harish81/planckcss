@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>planckcss</title>
-    <link rel="stylesheet" href="dist/planckcss.css">
-    <link rel="stylesheet" href="dist/extension_form.css">
-    <link rel="stylesheet" href="dist/extension_spacing.css">
-    <link rel="stylesheet" href="dist/extension_colors.css">
-    <link rel="stylesheet" href="dist/extension_toggle.css">
-    <link rel="stylesheet" href="dist/extension_display.css">
+    <link href="dist/planckcss.css" rel="stylesheet">
+    <link href="dist/extension_form.css" rel="stylesheet">
+    <link href="dist/extension_spacing.css" rel="stylesheet">
+    <link href="dist/extension_colors.css" rel="stylesheet">
+    <link href="dist/extension_toggle.css" rel="stylesheet">
+    <link href="dist/extension_display.css" rel="stylesheet">
     <!--//OR Import//-->
     <!--<link rel="stylesheet" href="dist/planckcss.bundle.css">-->
     <style>
@@ -82,21 +82,29 @@
 </head>
 <body>
 <nav class="nav-bar d-flex shadow bg-white p-2 between-xs middle-xs">
-    <a href="javascript:void(0)" class="button menu-icon m-0" onclick="toggleSidebar()">☰</a>
+    <a class="button menu-icon m-0" href="javascript:void(0)" onclick="toggleSidebar()">☰</a>
     <h4 class="m-0">planckcss</h4>
-    <div></div>
+    <div>
+        <a class="mr-1" href="https://github.com/harish81/planckcss" target="_blank" title="View On Github">
+            <svg fill="none" height="23" style="vertical-align: middle;" viewBox="0 0 22 23" width="22"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 22.0001V18.1301C15.0375 17.6532 14.9731 17.1739 14.811 16.7239C14.6489 16.2738 14.3929 15.8635 14.06 15.5201C17.2 15.1701 20.5 13.9801 20.5 8.52006C20.4997 7.12389 19.9627 5.78126 19 4.77006C19.4559 3.54857 19.4236 2.19841 18.91 1.00006C18.91 1.00006 17.73 0.65006 15 2.48006C12.708 1.85888 10.292 1.85888 8 2.48006C5.27 0.65006 4.09 1.00006 4.09 1.00006C3.57638 2.19841 3.54414 3.54857 4 4.77006C3.03013 5.78876 2.49252 7.14352 2.5 8.55006C2.5 13.9701 5.8 15.1601 8.94 15.5501C8.611 15.89 8.35726 16.2955 8.19531 16.74C8.03335 17.1845 7.96681 17.6581 8 18.1301V22.0001M8 19.0001C3 20.5001 3 16.5001 1 16.0001L8 19.0001Z"
+                      stroke="#555555" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </svg>
+        </a>
+    </div>
 </nav>
 <!--Sidebar-->
 <div class="sidebar bg-white" id="mainSidebar">
     <div class="bg-primary text-white pl-3 pt-4">
-        <img src="https://i.ya-webdesign.com/images/avatar-png-icon-6.png" alt="avatar" class="avatar">
+        <img alt="avatar" class="avatar" src="https://i.ya-webdesign.com/images/avatar-png-icon-6.png">
         <h4 class="m-0">planckcss</h4>
         <p>Sidebar menu</p>
     </div>
     <div>
         <ul class="no-list">
             <li>
-                <input class="collapse" type="checkbox" name="" id="coredoc" checked>
+                <input checked class="collapse" id="coredoc" name="" type="checkbox">
                 <label for="coredoc"><a><span class="icon">☖</span>Core</a></label>
                 <ul class="no-list">
                     <li><a href="#doc-core-button">Buttons</a></li>
@@ -111,16 +119,15 @@
             </li>
             <li><small class="ml-2">Extensions</small></li>
             <li>
-                <input class="collapse" type="checkbox" name="" id="extspace">
+                <input class="collapse" id="extspace" name="" type="checkbox">
                 <label for="extspace"><a><span class="icon">⚎</span>Spacing</a></label>
                 <ul class="no-list">
-                    <li><a href="#extension-spacing-margin">Margin</a></li>
-                    <li><a href="#extension-spacing-padding">Padding</a></li>
+                    <li><a href="#extension-spacing-margin">Margin & Padding</a></li>
                 </ul>
             </li>
             <li><a href="#extension-colors"><span class="icon">⚽</span>Colors</a></li>
             <li>
-                <input class="collapse" type="checkbox" name="" id="exttoggle">
+                <input class="collapse" id="exttoggle" name="" type="checkbox">
                 <label for="exttoggle"><a><span class="icon">⚞</span>Toggle</a></label>
                 <ul class="no-list">
                     <li><a href="#extension-toggle-dropdown">Dropdown</a></li>
@@ -136,7 +143,10 @@
 <div class="overlay"></div>
 <!--End sidebar-->
 <div class="container">
-    <p id="doc-core">
+    <p class="center-xs mb-0">
+        <img alt="" src="images/logo.png">
+    </p>
+    <p class="center-xs" id="doc-core">
         planckcss = <a href="https://milligram.io/">miligram</a> + <a
             href="https://github.com/evgenyrodionov/flexboxgrid2">flexboxgrid2</a>;
     </p>
@@ -180,38 +190,38 @@
 
     <form action="">
         <label for="name">Name:-</label>
-        <input type="text" name="name" id="name" placeholder="Enter name here">
+        <input id="name" name="name" placeholder="Enter name here" type="text">
 
         <label for="age">Age:-</label>
-        <select name="age" id="age">
+        <select id="age" name="age">
             <option value="">20</option>
             <option value="">30</option>
             <option value="">50+</option>
         </select>
 
         <label for="address">Address:-</label>
-        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter address here"></textarea>
+        <textarea cols="30" id="address" name="address" placeholder="Enter address here" rows="10"></textarea>
 
         <div class="form-group">
             <label for="testinput1">Enter Your name:</label>
-            <input type="text" name="testinput" id="testinput1">
+            <input id="testinput1" name="testinput" type="text">
             <label class="text-danger">This field is required!</label>
         </div>
 
         <div class="form-group">
-            <label for="testfile1" class="d-block">Upload profile pic:</label>
-            <input type="file" name="testfile" id="testfile1">
+            <label class="d-block" for="testfile1">Upload profile pic:</label>
+            <input id="testfile1" name="testfile" type="file">
         </div>
 
         <div class="form-group">
-            <label for="rem_me"><input type="checkbox" name="rem_me" id="rem_me"> Remember me</label>
+            <label for="rem_me"><input id="rem_me" name="rem_me" type="checkbox"> Remember me</label>
         </div>
         <input type="submit" value="Submit">
     </form>
 
     <h3 id="doc-core-image">Image</h3>
-    <img src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50"
-         alt="image sample">
+    <img alt="image sample"
+         src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50">
 
     <h3 id="doc-core-blockquote">Blockquote</h3>
     <blockquote>
@@ -263,7 +273,7 @@
     <h1>Extension</h1>
     <h3 id="extension-form">Form extended utility <small>(form_extended.css)</small></h3>
     <div class="checkbox">
-        <input id="checkbox2" type="checkbox" checked>
+        <input checked id="checkbox2" type="checkbox">
         <label for="checkbox2">
             Checkbox (checked)
         </label>
@@ -276,220 +286,48 @@
     </div>
 
     <div class="radio">
-        <input type="radio" name="radio1" id="radio1" value="option1" checked>
+        <input checked id="radio1" name="radio1" type="radio" value="option1">
         <label for="radio1">
             Radio1
         </label>
     </div>
     <div class="radio">
-        <input type="radio" name="radio1" id="radio2" value="option2">
+        <input id="radio2" name="radio1" type="radio" value="option2">
         <label for="radio2">
             Radio2
         </label>
     </div>
     <h3>Spacing Utility <small>(extension_spacing.css)</small></h3>
-    <h5 id="extension-spacing-margin">Margin</h5>
-    <div class="shadow bg-white">
-        <input type="checkbox" name="spcutil" id="marginutil" class="collapse">
-        <label for="marginutil" class="p-2"><b>Margin Classes ▼</b></label>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                <tr>
-                    <th><code>xs and above</code></th>
-                    <th><code>sm and above</code></th>
-                    <th><code>md and above</code></th>
-                    <th><code>lg and above</code></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><code>.m-0</code></td>
-                    <td><code>.m-sm-0</code></td>
-                    <td><code>.m-md-0</code></td>
-                    <td><code>.m-lg-0</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-0</code></td>
-                    <td><code>.mt-sm-0</code></td>
-                    <td><code>.mt-md-0</code></td>
-                    <td><code>.mt-lg-0</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-0</code></td>
-                    <td><code>.mr-sm-0</code></td>
-                    <td><code>.mr-md-0</code></td>
-                    <td><code>.mr-lg-0</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-0</code></td>
-                    <td><code>.mb-sm-0</code></td>
-                    <td><code>.mb-md-0</code></td>
-                    <td><code>.mb-lg-0</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-0</code></td>
-                    <td><code>.ml-sm-0</code></td>
-                    <td><code>.ml-md-0</code></td>
-                    <td><code>.ml-lg-0</code></td>
-                </tr>
-                <tr>
-                    <td><code>.m-1</code></td>
-                    <td><code>.m-sm-1</code></td>
-                    <td><code>.m-md-1</code></td>
-                    <td><code>.m-lg-1</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-1</code></td>
-                    <td><code>.mt-sm-1</code></td>
-                    <td><code>.mt-md-1</code></td>
-                    <td><code>.mt-lg-1</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-1</code></td>
-                    <td><code>.mr-sm-1</code></td>
-                    <td><code>.mr-md-1</code></td>
-                    <td><code>.mr-lg-1</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-1</code></td>
-                    <td><code>.mb-sm-1</code></td>
-                    <td><code>.mb-md-1</code></td>
-                    <td><code>.mb-lg-1</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-1</code></td>
-                    <td><code>.ml-sm-1</code></td>
-                    <td><code>.ml-md-1</code></td>
-                    <td><code>.ml-lg-1</code></td>
-                </tr>
-                <tr>
-                    <td><code>.m-2</code></td>
-                    <td><code>.m-sm-2</code></td>
-                    <td><code>.m-md-2</code></td>
-                    <td><code>.m-lg-2</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-2</code></td>
-                    <td><code>.mt-sm-2</code></td>
-                    <td><code>.mt-md-2</code></td>
-                    <td><code>.mt-lg-2</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-2</code></td>
-                    <td><code>.mr-sm-2</code></td>
-                    <td><code>.mr-md-2</code></td>
-                    <td><code>.mr-lg-2</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-2</code></td>
-                    <td><code>.mb-sm-2</code></td>
-                    <td><code>.mb-md-2</code></td>
-                    <td><code>.mb-lg-2</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-2</code></td>
-                    <td><code>.ml-sm-2</code></td>
-                    <td><code>.ml-md-2</code></td>
-                    <td><code>.ml-lg-2</code></td>
-                </tr>
-                <tr>
-                    <td><code>.m-3</code></td>
-                    <td><code>.m-sm-3</code></td>
-                    <td><code>.m-md-3</code></td>
-                    <td><code>.m-lg-3</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-3</code></td>
-                    <td><code>.mt-sm-3</code></td>
-                    <td><code>.mt-md-3</code></td>
-                    <td><code>.mt-lg-3</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-3</code></td>
-                    <td><code>.mr-sm-3</code></td>
-                    <td><code>.mr-md-3</code></td>
-                    <td><code>.mr-lg-3</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-3</code></td>
-                    <td><code>.mb-sm-3</code></td>
-                    <td><code>.mb-md-3</code></td>
-                    <td><code>.mb-lg-3</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-3</code></td>
-                    <td><code>.ml-sm-3</code></td>
-                    <td><code>.ml-md-3</code></td>
-                    <td><code>.ml-lg-3</code></td>
-                </tr>
-                <tr>
-                    <td><code>.m-4</code></td>
-                    <td><code>.m-sm-4</code></td>
-                    <td><code>.m-md-4</code></td>
-                    <td><code>.m-lg-4</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-4</code></td>
-                    <td><code>.mt-sm-4</code></td>
-                    <td><code>.mt-md-4</code></td>
-                    <td><code>.mt-lg-4</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-4</code></td>
-                    <td><code>.mr-sm-4</code></td>
-                    <td><code>.mr-md-4</code></td>
-                    <td><code>.mr-lg-4</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-4</code></td>
-                    <td><code>.mb-sm-4</code></td>
-                    <td><code>.mb-md-4</code></td>
-                    <td><code>.mb-lg-4</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-4</code></td>
-                    <td><code>.ml-sm-4</code></td>
-                    <td><code>.ml-md-4</code></td>
-                    <td><code>.ml-lg-4</code></td>
-                </tr>
-                <tr>
-                    <td><code>.m-5</code></td>
-                    <td><code>.m-sm-5</code></td>
-                    <td><code>.m-md-5</code></td>
-                    <td><code>.m-lg-5</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mt-5</code></td>
-                    <td><code>.mt-sm-5</code></td>
-                    <td><code>.mt-md-5</code></td>
-                    <td><code>.mt-lg-5</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mr-5</code></td>
-                    <td><code>.mr-sm-5</code></td>
-                    <td><code>.mr-md-5</code></td>
-                    <td><code>.mr-lg-5</code></td>
-                </tr>
-                <tr>
-                    <td><code>.mb-5</code></td>
-                    <td><code>.mb-sm-5</code></td>
-                    <td><code>.mb-md-5</code></td>
-                    <td><code>.mb-lg-5</code></td>
-                </tr>
-                <tr>
-                    <td><code>.ml-5</code></td>
-                    <td><code>.ml-sm-5</code></td>
-                    <td><code>.ml-md-5</code></td>
-                    <td><code>.ml-lg-5</code></td>
-                </tr>
-                </tbody>
-            </table>
+    <h5 id="extension-spacing-margin">Margin & Padding</h5>
+    <div class="shadow bg-white pl-4 pb-2">
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="p-2"><b>Margin Classes</b></label>
+                <ul>
+                    <li>xs and above - <code>.m{side}-{size}</code></li>
+                    <li>sm and above - <code>.m{side}-sm-{size}</code></li>
+                    <li>md and above - <code>.m{side}-md-{size}</code></li>
+                    <li>lg and above - <code>.m{side}-lg-{size}</code></li>
+                    <li>xl and above - <code>.m{side}-xl-{size}</code></li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <label class="p-2"><b>Padding Classes</b></label>
+                <ul>
+                    <li>xs and above - <code>.p{side}-{size}</code></li>
+                    <li>sm and above - <code>.p{side}-sm-{size}</code></li>
+                    <li>md and above - <code>.p{side}-md-{size}</code></li>
+                    <li>lg and above - <code>.p{side}-lg-{size}</code></li>
+                    <li>xl and above - <code>.p{side}-xl-{size}</code></li>
+                </ul>
+            </div>
         </div>
+        <blockquote><b>Note:</b> Spacing utility classes are same as bootstrap's spacing, But it does not include
+            <code>auto</code> and <code>x</code>,<code>y</code>
+            <a href="https://getbootstrap.com/docs/4.4/utilities/spacing/" target="_blank">Read more >></a>
+        </blockquote>
     </div>
-    <h5 id="extension-spacing-padding">Padding</h5>
-    <blockquote><b>Note:</b> Same classes for padding except start with <code>p*</code></blockquote>
-    <div style="border: 1px solid red;" class="ml-5 mr-md-5 pl-2"><code>.ml-5 .mr-md-5 .pl-2</code></div>
+    <div class="ml-5 mr-md-5 pl-2 mt-4" style="border: 1px solid red;"><code>.ml-5 .mr-md-5 .pl-2</code></div>
 
     <h3 id="extension-colors">Color Utility <small>(extension_colors.css)</small></h3>
     <div class="row">
@@ -512,8 +350,8 @@
     </div>
     <br>
     <div class="bg-success text-white p-3">
-        <strong>Success</strong>: This is alert example using colors utility. <a href="#"
-                                                                                 class="float-right text-white">x</a>
+        <strong>Success</strong>: This is alert example using colors utility. <a class="float-right text-white"
+                                                                                 href="#">x</a>
     </div>
 
     <h3>Toggle Utility <small>(extension_toggle.css)</small></h3>
@@ -531,7 +369,7 @@
     <div class="dropdown">
         <button class="dropdown-button">Dropdown2 ▼</button>
         <div class="dropdown-content bg-white shadow border pl-3" style="width: 150px;">
-            <ul style="list-style-type: none;" class="mb-0">
+            <ul class="mb-0" style="list-style-type: none;">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
@@ -541,8 +379,8 @@
 
     <h5 id="extension-toggle-collapse">Collapse</h5>
     <div>
-        <input class="collapse" type="checkbox" id="collapse1">
-        <label for="collapse1" class="button">Show me! ▼</label>
+        <input class="collapse" id="collapse1" type="checkbox">
+        <label class="button" for="collapse1">Show me! ▼</label>
         <div>
             This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit amet.
             This is collapse content. Lorem ipsum dolor sit amet.
@@ -551,7 +389,7 @@
 
     <ul>
         <li class="shadow bg-white p-2">
-            <input class="collapse" type="radio" name="collapse-list" id="collapse-list-1">
+            <input class="collapse" id="collapse-list-1" name="collapse-list" type="radio">
             <label for="collapse-list-1">Item 1! ▼</label>
             <div>
                 This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
@@ -559,7 +397,7 @@
             </div>
         </li>
         <li class="shadow bg-white p-2">
-            <input class="collapse" type="radio" name="collapse-list" id="collapse-list-2">
+            <input class="collapse" id="collapse-list-2" name="collapse-list" type="radio">
             <label for="collapse-list-2">Item 2! ▼</label>
             <div>
                 This is collapse content. Lorem ipsum dolor sit amet. This is collapse content. Lorem ipsum dolor sit
@@ -574,25 +412,25 @@
     <div class="shadow p-3">
         <div class="tab-container" style="height: 150px;">
             <div class="tab">
-                <input type="radio" name="tab-example1" id="tab-one" checked>
+                <input checked id="tab-one" name="tab-example1" type="radio">
                 <label for="tab-one">ONE</label>
                 <div class="tab-content">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, veritatis!
                 </div>
             </div>
             <div class="tab">
-                <input type="radio" name="tab-example1" id="tab-two">
+                <input id="tab-two" name="tab-example1" type="radio">
                 <label for="tab-two">TWO</label>
                 <div class="tab-content">
                     As the era of the masses does away with the instruments monopolizing power, wealth and arms, it
                     will, inevitably, destroy the monopoly of social activity in such areas as sports, horsemanship, and
                     so forth
-                    <img src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50"
-                         alt="">
+                    <img alt=""
+                         src="https://images.unsplash.com/photo-1558981001-792f6c0d5068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=50">
                 </div>
             </div>
             <div class="tab">
-                <input type="radio" name="tab-example1" id="tab-three">
+                <input id="tab-three" name="tab-example1" type="radio">
                 <label for="tab-three">THREE</label>
                 <div class="tab-content">
                     Societies which consider materialistic knowledge taboo are likewise reactionary societies, biased
