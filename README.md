@@ -1,6 +1,8 @@
 # planckcss
 ![version](https://img.shields.io/github/v/release/harish81/planckcss?include_prereleases&label=version)
 ![commit](https://img.shields.io/github/last-commit/harish81/planckcss)
+![core size](https://img.shields.io/github/size/harish81/planckcss/docs/dist/planckcss.css?label=core)
+![bundle size](https://img.shields.io/github/size/harish81/planckcss/docs/dist/planckcss.bundle.css?label=bundle)
 
 A minimal css framework based on [milligram](https://github.com/milligram/milligram) and [flexbox grid2](https://github.com/evgenyrodionov/flexboxgrid2).
 Planckcss is ~19 kb (Core) & ~35 kb (Bundle of all extensions).
@@ -24,8 +26,6 @@ OR Import
 
 ## Examples & Docs
 https://harish81.github.io/planckcss/
-
-## Features
 
 ## How to contribute?
 Planckcss is made of `scss`. We use [laravel-mix](https://github.com/JeffreyWay/laravel-mix) to 
